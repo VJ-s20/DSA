@@ -7,7 +7,6 @@ Accessing an item in LL in worst case is O(n) while in arrays it's O(1)
 Inserting an item in LL is O(1) while in arrays it's O(n)
 """
 
-from os import curdir
 
 
 class Node:
@@ -122,6 +121,11 @@ class LinkedList:
         if node is None:
             return 0
         return 1+self.recur_len(node.next)
+    def compare(self,head1,head2):
+        p=self.len_iter(head1)
+        q=self.len_iter(head2)
+        return p==q
+
 # Swapping two nodes in a Linked list
     def swap_nodes(self,key_1,key_2):
         if key_1==key_2:
@@ -336,20 +340,32 @@ class LinkedList:
             num2+=str(q.data)
             q=q.next
         return int(num1[::-1])+int(num2[::-1])
-
+def compare_lists(llist1, llist2):
+    def length(head):
+        curr=head
+        count=0
+        while curr:
+            curr=curr.next
+            count+=1
+        print(count)
+        return count
+    p=length(llist1)
+    q=length(llist2)
+    return p==q
 if __name__ == "__main__":
     Llist1 = LinkedList()
     Llist1.append(5)
     Llist1.append(6)
     Llist1.append(3)
     Llist1.append(8)
-    # Llist2=LinkedList()
-    # Llist2.append(8)
-    # Llist2.append(4)
-    # Llist2.append(2)
-    # Llist1.rotate(4)
+    Llist2=LinkedList()
+    Llist2.append(8)
+    Llist2.append(4)
+    Llist2.append(2)
+    Llist1.rotate(4)
     # Llist1.move_tail_to_head()
     # print(Llist1.sum_of_two_LL(Llist2))
     # Llist1.reverse_ll()
-    Llist1.print_list()
-    print(Llist1.Nth_val())
+    # Llist1.print_list()
+    # print(Llist1.Nth_val())
+    print(compare_lists(Llist1.head,Llist2.head))

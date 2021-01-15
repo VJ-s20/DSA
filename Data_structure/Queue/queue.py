@@ -29,6 +29,9 @@ class Quene:
     def gets(self):
         print(self.items)
 
+    def __len__(self):
+        return len(self.items)
+
 if __name__ == "__main__":
     q=Quene()
     print("""1 to insert item. 2 to pop item 4 to print quene 3. to peek item """)

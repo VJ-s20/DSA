@@ -26,13 +26,45 @@
 
 # riddle([1,2,3])
 
-def printFibb(n):
-    # your code here
-    first=0
-    second=1
-    for _ in range(n):
-        next=first+second
-        first=second
-        second=next
-        print(first)
-printFibb(7)
+# def printFibb(n):
+#     # your code here
+#     first=0
+#     second=1
+#     for _ in range(n):
+#         next=first+second
+#         first=second
+#         second=next
+#         print(first)
+# printFibb(7)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
