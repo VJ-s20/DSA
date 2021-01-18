@@ -10,12 +10,13 @@
     # return len(dels)
 
 from collections import Counter
-def number_needed(a, b):
-    ct_a = Counter(a)
-    ct_b = Counter(b)
-    ct_a.subtract(ct_b)
-    return ct_a,(ct_a-ct_b)
+def makeAnagram(a, b):
+    d1=Counter(a)
+    d2=Counter(b)
+    result=(d1-d2)+(d2-d1)
+    return sum(result.values())
+    
 
 
-print(number_needed("fcrxzwscanmligyxyvym","jxwtrhvujlmrpdoqbisbwhmgpmeoke"))
-# print(makeAnagram("fcrxzwscanmligyxyvym","jxwtrhvujlmrpdoqbisbwhmgpmeoke"))
+# print(number_needed("fcrxzwscanmligyxyvym","jxwtrhvujlmrpdoqbisbwhmgpmeoke"))
+print(makeAnagram("fcrxzwscanmligyxyvym","jxwtrhvujlmrpdoqbisbwhmgpmeoke"))
