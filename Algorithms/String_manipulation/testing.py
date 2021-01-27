@@ -37,7 +37,22 @@
 #         print(first)
 # printFibb(7)
 
+# def balancedSums(arr):
+#     mid=(len(arr)//2)
+#     if sum(arr[:mid])==sum(arr[mid+1:]):
+#         return "YES"
+#     return "NO"
 
+# arr=[2,0,0,0]
+# print(balancedSums(arr))
+
+
+
+def recur(n):
+    if n==0:
+        return 1
+    return n*recur(n-1)
+print(recur(3))
 
 
 
